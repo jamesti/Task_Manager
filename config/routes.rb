@@ -1,7 +1,7 @@
 TaskManager::Application.routes.draw do
   resources :tasks
 
-  post "comments", to: "comment#create"
+  post "tasks/:task_id/comments" => 'comments#create', as: :task_comments
 
   root 'tasks#urgent'
 

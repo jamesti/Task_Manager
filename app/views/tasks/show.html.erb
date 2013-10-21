@@ -20,5 +20,11 @@
   <%= @task.urgent %>
 </p>
 
+<h2>Observações</h2>
+<%= render @task.comments %>
+
+<h2>Entre com novas Observações</h2>
+<%= render 'comments/form' %>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
